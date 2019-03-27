@@ -2,7 +2,7 @@
  * @Author: kael
  * @Date: 2018-02-01 17:41:25
  * @Last Modified by: Kaiser
- * @Last Modified time: 2019-03-27 19:21:45
+ * @Last Modified time: 2019-03-27 21:16:09
  */
 
 module.exports = class PubSub {
@@ -12,14 +12,12 @@ module.exports = class PubSub {
 
   subscribe(type, fn) {
     // todo subscribe
-    const that = this
-    that.subscribers[type] = fn
+    this.subscribers[type] = fn
   }
 
   unsubscribe(type, fn) {
     // todo unsubscribe
-    const that = this
-    that.subscribers[type] = undefined
+    this.subscribers[type] = undefined
   }
 
   publish(type, ...args) {

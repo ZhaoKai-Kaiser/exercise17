@@ -2,7 +2,7 @@
  * @Author: kael
  * @Date: 2018-02-01 17:41:25
  * @Last Modified by: Kaiser
- * @Last Modified time: 2019-03-27 19:26:51
+ * @Last Modified time: 2019-03-27 21:13:20
  */
 
 class ObserverList {
@@ -39,9 +39,7 @@ class Subject {
   }
   notify(...args) {
     // todo notify
-    this.observers.observerList.forEach(observer => {
-      observer.update(...args)
-    })
+    this.observers.observerList.forEach(observer => observer.update(...args))
   }
 }
 
